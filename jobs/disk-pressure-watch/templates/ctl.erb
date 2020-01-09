@@ -18,7 +18,7 @@ case $1 in
 
     echo $$ > $PIDFILE
 
-    exec chpst -u vcap:vcap /var/vcap/jobs/disk-pressure-watch/bin/watcher.sh \
+    exec /var/vcap/jobs/disk-pressure-watch/bin/watcher.sh \
       1>>$LOG_DIR/disk-pressure-watch.stdout.log \
       2>>$LOG_DIR/disk-pressure-watch.stderr.log
 
