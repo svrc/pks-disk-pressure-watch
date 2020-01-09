@@ -20,7 +20,8 @@ export BOSH_CLIENT=ops_manager BOSH_CLIENT_SECRET=fakesecret BOSH_CA_CERT=/var/t
 ```
 git clone https://github.com/svrc-pivotal/pks-disk-pressure-watch && cd pks-disk-pressure-watch
 bosh create-release
-bosh upload-release ./dev_releases/image-reload-controller/image-reload-controller-0+dev.1.yml
+bosh upload-release ./dev_releases/pks-disk-pressure-watch/pks-disk-pressure-watch-0+dev.1.yml 
+
 ```
 4. Configure the addon from this repo
 ```
