@@ -8,7 +8,7 @@ This script ensures any offline system images are reloaded on that node after th
 
 ## How do I install it?
 
-1. Open a shell prompt on a BOSH CLI with access to your PKS bosh director, such as Ops Manager.
+1. Open a shell prompt on a BOSH CLI workstation with network access to your PKS bosh director.  Eg. Ops Manager .
 2. Export your BOSH credentials to the enviornment.  These can be accessed via the Ops Manager GUI -> BOSH Director Tile -> Credentials Tab -> Bosh Commandline Credentials.    
 
 e.g.
