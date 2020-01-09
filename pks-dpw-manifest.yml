@@ -1,0 +1,21 @@
+# Manifest documentation is here https://bosh.io/docs/runtime-config
+# This manifest installs the pks-disk-pressure-watch job 
+---
+name: pks-disk-pressure-watch
+
+releases:
+- name: pks-disk-pressure-watch
+  version: 0+dev.1
+
+addons:
+  - name: disk-pressure-watch
+    jobs:
+    - name: disk-pressure-watch
+      release: pks-disk-pressure-watch
+
+    include: 
+      jobs:
+      - name: kubelet
+        release: kubo
+      stemcell:
+      - os: ubuntu-xenial

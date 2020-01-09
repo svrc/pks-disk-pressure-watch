@@ -1,0 +1,22 @@
+*#
+*.swp
+*~
+.DS_Store
+
+# BOSH
+.dev_builds
+.final_builds/jobs/**/*.tgz
+.final_builds/packages/**/*.tgz
+.idea
+blobs/
+config/private.yml
+dev_releases/
+releases/**/*.tgz
+releases/*.tgz
+tags
+envs
+
+dns-creds.yml
+src/bosh-dns/acceptance_tests/creds.yml
+src/bosh-dns/acceptance_tests/linux/override_nameserver/disabled/dns-creds.yml
+
