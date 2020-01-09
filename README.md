@@ -15,12 +15,13 @@ e.g.
 ```
 export BOSH_CLIENT=ops_manager BOSH_CLIENT_SECRET=fakesecret BOSH_CA_CERT=/var/tempest/workspaces/default/root_ca_certificate  BOSH_ENVIRONMENT=10.0.0.10
 ```
-3. Copy or clone this repository onto this BOSH CLI workstation and upload the BOSH release from this repo and/or the release tarball to this terminal and then upload that release into BOSH
+3. Copy or clone this repository onto this BOSH CLI workstation and create+upload the BOSH release to the director
 
 ```
 git clone https://github.com/svrc-pivotal/pks-disk-pressure-watch && cd pks-disk-pressure-watch
 bosh create-release
-bosh upload-release ./dev_releases/image-reload-controller/image-reload-controller-0+dev.1.yml
+bosh upload-release ./dev_releases/pks-disk-pressure-watch/pks-disk-pressure-watch-0+dev.1.yml 
+
 ```
 4. Configure the addon from this repo
 ```
