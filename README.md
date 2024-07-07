@@ -1,12 +1,13 @@
 # TKGI/PKS pressure watcher 
 
+**This was incorporated upstream in PKS/TKGI 1.8+, is here for historical purposes**
+
 ## What does this do?
 
 TKGI/PKS relies on airgapped, preloaded images for system daemons (e.g. CoreDNS, Observability, etc.).   During DiskPressure conditions, the default Kubelet setup is to garbage collect all images, evict all pods, and cordon the node.   After DiskPressure is lifted, any Pods on this node that rely on an offline image will likely fail with `ErrImagePull` as their Image Pull policy is "Never" and certain images aren't registered on Docker Hub as they were intended to never need to be downloaded over the Internet.
 
 This script ensures any offline system images are reloaded on that node after the DiskPressure condition is lifted, and future system pods will succeed in starting.   Note that any evicted Pods will still need to be manually deleted.
 
-This will be incorporated upstream in PKS/TKGI 1.8+
 
 ## How do I install it?
 
